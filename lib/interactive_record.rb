@@ -15,8 +15,6 @@ class InteractiveRecord
     column_names.compact
   end 
   
-  
-  
   def initialize(options={})
     options.each {|property, value| self.instance_variable_set("@#{property}", value)}
   end 
