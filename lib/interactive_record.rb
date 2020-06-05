@@ -45,7 +45,8 @@ class InteractiveRecord
   end 
   
   def self.find_by(attr) 
-    
+    key = attr.keys 
+    value = attr[0]
   end 
   
   
