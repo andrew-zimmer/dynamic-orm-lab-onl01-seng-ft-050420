@@ -45,9 +45,9 @@ class InteractiveRecord
   end 
   
   def self.find_by(attr) 
-    key = attr.to_a[0].to_s 
-    value = attr.to_a[1]
-    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key} = #{value}")
+    key = attr.keys[0].to_s 
+    value = attr.values[0]
+    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE ? = ?", key, value)
   end 
   
   
